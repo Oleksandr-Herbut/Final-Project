@@ -5,7 +5,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 2</title>
     <link rel="stylesheet" href="styles/style2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- ====================== Nav Menu ====================== -->
+    <navbar>
+      <div id="search-container">
+        <div class="logo">
+          <a href="page1.html"
+            ><img
+              src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg"
+              alt="Meetup Logo"
+          /></a>
+          <img
+            class="searchLogo"
+            src="accets/images/navMenu/searchNaw.svg"
+            alt=""
+          />
+          <input type="text" placeholder="Search events" />
+          <input type="text" placeholder="Mountain View, CA" />
+          <button type="button" class="redBtn"></button>
+        </div>
+
+        <div class="extra-links">
+          <a href="#"
+            ><img
+              src="accets/images/navMenu/language.svg"
+              alt="language icon"
+              style="height: 16px"
+            />
+            English
+          </a>
+          <a href="#">Log in</a>
+          <button type="button">Sign up</button>
+        </div>
+      </div>
+    </navbar>
+
+    <!-- ============================================ -->
+    <main>
+      <div class="eventsMainTopContainer">
+        <div class="container">
+          <h1>Events near New York, NY</h1>
+          <h4 id="eventsPageEventsHeader">Events</h4>
+          <div class="filters">
+            <div class="dropdown" id="type-dropdown">
+              <div class="dropdown-toggle">Any type</div>
+              <ul class="dropdown-menu">
+                <li data-value="">Any type</li>
+                <li data-value="online">Online</li>
+                <li data-value="offline">Offline</li>
+              </ul>
+            </div>
+            <div class="dropdown" id="distance-dropdown">
+              <div class="dropdown-toggle">Any distance</div>
+              <ul class="dropdown-menu">
+                <li data-value="">Any distance</li>
+                <li data-value="5">5 km</li>
+                <li data-value="10">10 km</li>
+                <li data-value="15">15 km</li>
+                <li data-value="25">25 km</li>
+                <li data-value="50">50 km</li>
+                <li data-value="75">75 km</li>
+                <li data-value="100">100 km</li>
+              </ul>
+            </div>
+            <div class="dropdown" id="category-dropdown">
+              <div class="dropdown-toggle">Any category</div>
+              <ul class="dropdown-menu">
+                <li data-value="">Any category</li>
+                <li data-value="Social Activities">Social Activities</li>
+                <li data-value="Hobbies and Passions">Hobbies and Passions</li>
+                <li data-value="Health and Wellbeing">Health and Wellbeing</li>
+                <li data-value="Business">Business</li>
+                <li data-value="Technology">Technology</li>
+              </ul>
+            </div>
+          </div>
+          <div class="events" id="events-list"></div>
+        </div>
+
+        <div class="eventsMainTopRight">
+          <p>Find events near</p>
+          <h4>New York, NY</h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181346.89257609643!2d-74.13556746171338!3d40.69947723323629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sde!4v1718307067883!5m2!1sen!2sde"
+            width="350"
+            height="285"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="test">
+        <div class="footerHead">
+          <p>Create your own Meetup group.</p>
+          <button>Get Started</button>
+        </div>
+
+        <div class="footers-columns">
+          <div class="footer-column">
+            <h4>Your Account</h4>
+            <ul>
+              <li><a href="">Sign up</a></li>
+              <li><a href="">Log in</a></li>
+              <li><a href="">Help</a></li>
+              <li><a href="">Become an Affiliate</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Discover</h4>
+            <ul>
+              <li><a href="">Groups</a></li>
+              <li><a href="">Calendar</a></li>
+              <li><a href="">Topics</a></li>
+              <li><a href="">Cities</a></li>
+              <li><a href="">Online Events</a></li>
+              <li><a href="">Local Guides</a></li>
+              <li><a href="">Make Friends</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Meetup</h4>
+            <ul>
+              <li><a href="">About</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Meetup Pro</a></li>
+              <li><a href="">Careers</a></li>
+              <li><a href="">Apps</a></li>
+              <li><a href="">Podcast</a></li>
+            </ul>
+          </div>
+        </div>
+        <main class="follow">
+          <h4>Follow us</h4>
+          <div class="containerImages">
+            <div class="leftSiteFooter">
+              <img
+                src="accets/images/footer/Link - Meetup on Facebook → SVG copy.svg"
+                alt=""
+              />
+              <img
+                src="accets/images/footer/Link - Meetup on Twitter → SVG.svg"
+                alt=""
+              />
+              <img
+                src="accets/images/footer/Link - Meetup on YouTube → SVG.svg"
+                alt=""
+              />
+              <img
+                src="accets/images/footer/Link - Instagram → SVG.svg"
+                alt=""
+              />
+              <img src="accets/images/footer/Link - TikTok → SVG.svg" alt="" />
+            </div>
+            <div class="rightSiteFooter">
+              <img
+                src="accets/images/footer/Link - Download app from Google Play → download_en-US.svg.svg"
+                alt=""
+              />
+              <img
+                src="accets/images/footer/Link - Download app from App Store → download_en-US.svg.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </main>
+        <div class="legal">
+          <img src="accets/images/footer/span.text-white.svg" alt="" />
+          <a href="">Terms of Service</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Do Not Sell or Share My Personal Data</a>
+          <a href="">Cookie Policy</a>
+          <a href="">Help</a>
+        </div>
+      </div>
+    </footer>
+  </body>
   <script src="scripts/index2.js"></script>
 </html>
