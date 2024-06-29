@@ -11,7 +11,7 @@ html {
   max-width: 1512px;
   margin: 0 auto;
   p {
-    font-size: 16px;
+    font-size: $text-size-up;
   }
 }
 
@@ -39,7 +39,7 @@ html {
   padding: 10px;
   border-radius: 5px 0 0 5px;
   border: 1px solid gray;
-  border-right: none;
+  border-right: $border-none;
   outline: none;
   text-indent: 20px;
   border-left: 1px solid #ccc;
@@ -54,8 +54,8 @@ html {
 
 .redBtn {
   background-color: #f44336;
-  border: none;
-  color: white;
+  border: $border-none;
+  color: $colorWhite;
   padding: 10px 20px;
   cursor: pointer;
   width: 38px;
@@ -75,8 +75,8 @@ html {
   @include displayFlex2(center, center);
   button {
     background-color: #009688;
-    border: none;
-    color: white;
+    border: $border-none;
+    color: $colorWhite;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 25px;
@@ -88,7 +88,7 @@ html {
 #content-block {
   @include displayFlex2(center, center);
   padding: 20px 10% 20px 0px;
-  background-color: white;
+  background-color: $colorWhite;
   border-radius: 10px;
   .image img {
     width: 100%;
@@ -106,9 +106,9 @@ html {
     margin-bottom: 20px;
   }
   button {
-    background-color: #00798a;
-    border: none;
-    color: white;
+    background-color: $colorHex;
+    border: $border-none;
+    color: $colorWhite;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 8px;
@@ -124,11 +124,10 @@ html {
 .siteLeft {
   @include displayFlex2(center, center);
   gap: 10px;
-  // margin: 20px;
 }
 
 .siteRight {
-  color: #00798a;
+  color: $colorHex;
   margin: 10px;
 }
 .cards {
@@ -149,7 +148,7 @@ html {
   }
   p {
     padding: 7px;
-    font-size: 14px;
+    font-size: $text-size;
     font-weight: 400;
   }
 }
@@ -185,13 +184,13 @@ html {
     width: 192px;
     height: 40px;
     background-color: #e32359;
-    color: white;
-    border: none;
+    color: $colorWhite;
+    border: $border-none;
     border-radius: 5px;
   }
 }
 .meetupText {
-  margin-bottom: 16px;
+  margin-bottom: $block-margin-bottom;
 }
 
 // =================================================
@@ -250,10 +249,10 @@ html {
 .worksContent {
   max-width: 379px;
   h4 {
-    margin-bottom: 16px;
+    margin-bottom: $block-margin-bottom;
   }
   p {
-    margin-bottom: 16px;
+    margin-bottom: $block-margin-bottom;
   }
 }
 .groups {
@@ -261,21 +260,21 @@ html {
 }
 .styleText {
   font-weight: 500;
-  font-size: 16px;
-  color: #00798a;
+  font-size: $text-size-up;
+  color: $colorHex;
 }
 // =================================================
 #friendships {
   margin-bottom: 53px;
   h2 {
-    margin-bottom: 16px;
+    margin-bottom: $block-margin-bottom;
   }
 }
 .friendshipsText {
   color: #707070;
-  font-size: 14px;
+  font-size: $text-size;
   font-weight: 400;
-  margin-bottom: 16px;
+  margin-bottom: $block-margin-bottom;
 }
 .gridFriendships {
   display: grid;
@@ -290,13 +289,13 @@ html {
   }
 }
 .readMoreText {
-  color: #00798a;
+  color: $colorHex;
 }
 // ==========================================
 
 #footer {
   background-color: #1c1c1c;
-  color: #ffffff;
+  color: $colorWhite;
   padding: 3% 7% 3% 7%;
   // text-align: center;\
 }
@@ -308,12 +307,12 @@ html {
   gap: 10px;
   width: 100%;
   p {
-    font-size: 16px;
+    font-size: $text-size-up;
   }
   button {
     border-radius: 6px;
-    border: 2px solid #ffffff;
-    color: #ffffff;
+    border: 2px solid $colorWhite;
+    color: $colorWhite;
     background-color: transparent;
     padding: 10px 25px 10px 14px;
   }
@@ -329,7 +328,7 @@ html {
   margin-bottom: 20px;
   h4 {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: $text-size-up;
     font-weight: 400;
   }
   ul {
@@ -349,7 +348,7 @@ html {
   margin-top: 20px;
   h4 {
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: $text-size;
     font-weight: 400;
   }
 }
@@ -376,6 +375,6 @@ html {
     color: #c5c4c4;
     text-decoration: none;
     margin: 0 10px;
-    font-size: 14px;
+    font-size: $text-size;
   }
 }

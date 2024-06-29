@@ -335,7 +335,7 @@ html p {
 
 #footer {
   background-color: #1c1c1c;
-  color: #ffffff;
+  color: white;
   padding: 3% 7% 3% 7%;
 }
 
@@ -354,8 +354,8 @@ html p {
 }
 .footerHead button {
   border-radius: 6px;
-  border: 2px solid #ffffff;
-  color: #ffffff;
+  border: 2px solid white;
+  color: white;
   background-color: transparent;
   padding: 10px 25px 10px 14px;
 }

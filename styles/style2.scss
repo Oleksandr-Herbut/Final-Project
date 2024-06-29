@@ -211,7 +211,7 @@ html {
 
 #footer {
   background-color: #1c1c1c;
-  color: #ffffff;
+  color: $colorWhite;
   padding: 3% 7% 3% 7%;
   // text-align: center;\
 }
@@ -227,8 +227,8 @@ html {
   }
   button {
     border-radius: 6px;
-    border: 2px solid #ffffff;
-    color: #ffffff;
+    border: 2px solid $colorWhite;
+    color: $colorWhite;
     background-color: transparent;
     padding: 10px 25px 10px 14px;
   }
@@ -264,7 +264,7 @@ html {
   margin-top: 20px;
   h4 {
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: $text-size;
     font-weight: 400;
   }
 }
@@ -291,6 +291,6 @@ html {
     color: #c5c4c4;
     text-decoration: none;
     margin: 0 10px;
-    font-size: 14px;
+    font-size: $text-size;
   }
 }
