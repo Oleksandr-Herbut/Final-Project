@@ -16,8 +16,10 @@ html {
 }
 
 .allPages {
-  padding: 50px;
+  padding: 0 50px 50px 50px;
 }
+
+//========================= NAV MENU =========================
 
 #search-container {
   @include displayFlex2(space-between, center);
@@ -83,7 +85,7 @@ html {
   }
 }
 
-// ========================================================================================
+//========================= JOIN MEETUP =========================
 
 #content-block {
   @include displayFlex2(center, center);
@@ -116,7 +118,8 @@ html {
   }
 }
 
-// ======
+//========================= EVENTS =========================
+
 .heading2 {
   @include displayFlex2(space-between, center);
   margin-bottom: 30px;
@@ -130,6 +133,9 @@ html {
   color: $colorHex;
   margin: 10px;
 }
+
+//=====
+
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -171,7 +177,8 @@ html {
   color: #707070;
   opacity: 70%;
 }
-// =================================================
+
+//========================= MEETUP BLOCK =========================
 
 #meetup {
   @include displayFlex2(center, center);
@@ -193,7 +200,7 @@ html {
   margin-bottom: $block-margin-bottom;
 }
 
-// =================================================
+//========================= CATEGORIES =========================
 #exploreTopCategories h2 {
   margin-bottom: 24px;
 }
@@ -212,7 +219,8 @@ html {
   margin-bottom: 4%;
 }
 
-// =================================================
+//========================= CITY OF MEETUP =========================
+
 #citiesOnMeetup p {
   margin: 16px 0 16px 0;
   opacity: 70%;
@@ -227,7 +235,8 @@ html {
   }
 }
 
-// =================================================
+//========================= MEETUP WORKS =========================
+
 #meetupWorks {
   margin-bottom: 64px;
   h2 {
@@ -263,7 +272,9 @@ html {
   font-size: $text-size-up;
   color: $colorHex;
 }
-// =================================================
+
+//========================= FRIENDSHIPS =========================
+
 #friendships {
   margin-bottom: 53px;
   h2 {
@@ -291,7 +302,8 @@ html {
 .readMoreText {
   color: $colorHex;
 }
-// ==========================================
+
+//========================= FOOTER =========================
 
 #footer {
   background-color: #1c1c1c;

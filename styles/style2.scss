@@ -14,6 +14,7 @@ html {
     font-size: 16px;
   }
 }
+//========================= NAV MENU =========================
 
 #search-container {
   @include displayFlex2(space-between, center);
@@ -35,7 +36,7 @@ html {
   padding: 10px;
   border-radius: 5px 0 0 5px;
   border: 1px solid gray;
-  border-right: none;
+  border-right: $border-none;
   outline: none;
   text-indent: 20px;
   border-left: 1px solid #ccc;
@@ -50,8 +51,8 @@ html {
 
 .redBtn {
   background-color: #f44336;
-  border: none;
-  color: white;
+  border: $border-none;
+  color: $colorWhite;
   padding: 10px 20px;
   cursor: pointer;
   width: 38px;
@@ -71,8 +72,8 @@ html {
   @include displayFlex2(center, center);
   button {
     background-color: #009688;
-    border: none;
-    color: white;
+    border: $border-none;
+    color: $colorWhite;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 25px;
@@ -88,7 +89,8 @@ html {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-//========================================================================================
+
+//========================= MAIN CONTAINER =========================
 
 .eventsMainTopRight {
   h4 {
@@ -207,7 +209,7 @@ html {
   font-size: 0.8em;
   border-radius: 3px;
 }
-// ==========================================
+//========================= fOOTER =========================
 
 #footer {
   background-color: #1c1c1c;
