@@ -241,9 +241,9 @@ html p {
 
 .footerHead {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: start;
+  align-items: center;
+  flex-direction: row;
   padding-bottom: 20px;
   border-bottom: 1px solid #707070;
   gap: 10px;
@@ -262,8 +262,8 @@ html p {
 
 .footers-columns {
   display: flex;
+  align-items: center;
   gap: 25%;
-  align-items: start;
   flex-wrap: wrap;
   margin: 20px 0 20px 0;
 }
@@ -312,10 +312,10 @@ html p {
 }
 
 .legal {
-  margin-top: 20px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 .legal p {
   margin: 0 10px;

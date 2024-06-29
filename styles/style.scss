@@ -20,24 +20,21 @@ html {
 }
 
 #search-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include displayFlex2(space-between, center);
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
+  margin: 20px;
 
   .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include displayFlex2(center, center);
+  }
+  .logo img {
+    height: 37px;
+    margin-right: 30px;
   }
 }
 
-.logo img {
-  height: 37px;
-  margin-right: 30px;
-}
 #search-container input[type="text"] {
   padding: 10px;
   border-radius: 5px 0 0 5px;
@@ -67,31 +64,29 @@ html {
   background-image: url(../accets/images/navMenu/buttonSearch.svg);
   background-repeat: no-repeat;
 }
-.extra-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.extra-links a,
-.extra-links button {
+
+#search-container .extra-links a,
+#search-container .extra-links button {
   margin-left: 15px;
   text-decoration: none;
   color: #333;
 }
-#search-container .extra-links button {
-  background-color: #009688;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 25px;
+#search-container .extra-links {
+  @include displayFlex2(center, center);
+  button {
+    background-color: #009688;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+  }
 }
+
 // ========================================================================================
 
 #content-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include displayFlex2(center, center);
   padding: 20px 10% 20px 0px;
   background-color: white;
   border-radius: 10px;
@@ -123,15 +118,11 @@ html {
 
 // ======
 .heading2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include displayFlex2(space-between, center);
   margin-bottom: 30px;
 }
 .siteLeft {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include displayFlex2(center, center);
   gap: 10px;
   // margin: 20px;
 }
@@ -163,9 +154,7 @@ html {
   }
 }
 .goindAndFree {
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  @include displayFlex2(start, center);
 }
 .data::before {
   content: url(../accets/images/ivents/calendar.svg);
@@ -186,9 +175,7 @@ html {
 // =================================================
 
 #meetup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include displayFlex2(center, center);
   background-color: #97cad114;
   margin-bottom: 4%;
 }
@@ -218,10 +205,7 @@ html {
   flex-wrap: wrap;
 }
 .categories {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include displayFlex3(center, center, column);
   text-align: center;
   height: 112px;
   width: 135px;
@@ -236,9 +220,7 @@ html {
   color: #707070;
 }
 .cities {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+  @include displayFlex2(space-between, center);
   flex-wrap: wrap;
   margin-bottom: 64px;
   h4 {
@@ -320,15 +302,14 @@ html {
 }
 
 .footerHead {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
+  @include displayFlex3(start, center, row);
   padding-bottom: 20px;
   border-bottom: 1px solid #707070;
   gap: 10px;
   width: 100%;
-
+  p {
+    font-size: 16px;
+  }
   button {
     border-radius: 6px;
     border: 2px solid #ffffff;
@@ -338,9 +319,8 @@ html {
   }
 }
 .footers-columns {
-  display: flex;
+  @include flexAlign(center);
   gap: 25%;
-  align-items: start;
   flex-wrap: wrap;
   margin: 20px 0 20px 0;
 }
@@ -374,9 +354,7 @@ html {
   }
 }
 .containerImages {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include displayFlex2(space-between, center);
   flex-wrap: wrap;
   max-width: 1000px;
   gap: 40px;
@@ -388,10 +366,9 @@ html {
 }
 
 .legal {
+  @include flexAlign(center);
   margin-top: 20px;
-  display: flex;
   flex-wrap: wrap;
-  align-items: center;
   p {
     margin: 0 10px;
   }

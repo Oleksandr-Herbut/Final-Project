@@ -16,18 +16,14 @@ html {
 }
 
 #search-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include displayFlex2(space-between, center);
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
   margin: 20px;
 
   .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include displayFlex2(center, center);
   }
   .logo img {
     height: 37px;
@@ -72,9 +68,7 @@ html {
   color: #333;
 }
 #search-container .extra-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include displayFlex2(center, center);
   button {
     background-color: #009688;
     border: none;
@@ -103,9 +97,7 @@ html {
 }
 .eventsMainTopContainer {
   margin: 77px 158px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  @include displayFlex2(space-between, flex-start);
   gap: 18px;
 }
 #eventsPageEventsHeader {
@@ -153,7 +145,6 @@ html {
   list-style-type: none;
   border: 1px solid #ccc;
   border-radius: 5px;
-
   background-color: rgba(255, 255, 255, 0.945);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   li {
@@ -169,9 +160,7 @@ html {
   color: white;
 }
 .events {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  @include displayFlex1(column, 20px);
 }
 .event {
   display: flex;
@@ -189,9 +178,7 @@ html {
   }
 }
 .event-details {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  @include displayFlex1(column, 10px);
   margin-left: 10px;
 }
 .event-date {
@@ -230,10 +217,7 @@ html {
 }
 
 .footerHead {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
+  @include displayFlex3(start, center, row);
   padding-bottom: 20px;
   border-bottom: 1px solid #707070;
   gap: 10px;
@@ -250,9 +234,8 @@ html {
   }
 }
 .footers-columns {
-  display: flex;
+  @include flexAlign(center);
   gap: 25%;
-  align-items: start;
   flex-wrap: wrap;
   margin: 20px 0 20px 0;
 }
@@ -286,9 +269,7 @@ html {
   }
 }
 .containerImages {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include displayFlex2(space-between, center);
   flex-wrap: wrap;
   max-width: 1000px;
   gap: 40px;
@@ -300,10 +281,9 @@ html {
 }
 
 .legal {
+  @include flexAlign(center);
   margin-top: 20px;
-  display: flex;
   flex-wrap: wrap;
-  align-items: center;
   p {
     margin: 0 10px;
   }
