@@ -3,3 +3,23 @@
   display: inline-block;
   margin-right: 5px;
 }
+@mixin displayFlex3($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin displayFlex2($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin displayFlex1($direction, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+@mixin flexAlign($align) {
+  display: flex;
+  align-items: $align;
+}
