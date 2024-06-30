@@ -187,6 +187,7 @@ html p {
   border-left: none;
   border-right: none;
   border-bottom: none;
+  border-radius: initial;
 }
 .event img {
   max-width: 160px;
