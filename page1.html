@@ -11,23 +11,54 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="accets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="accets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="accets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
     <!-- ====================== Nav Menu ====================== -->
-    <div id="search-container">
-      <div class="logo">
-        <img
-          src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg"
-          alt="Meetup Logo"
-        />
-        <img
-          class="searchLogo"
-          src="accets/images/navMenu/searchNaw.svg"
-          alt=""
-        />
-        <input type="text" placeholder="Search events" />
-        <input type="text" placeholder="Mountain View, CA" />
-        <button type="button" class="redBtn"></button>
+    <nav>
+      <div id="search-container">
+        <div class="logo">
+          <img
+            src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg"
+            alt="Meetup Logo"
+          />
+          <img
+            class="searchLogo"
+            src="accets/images/navMenu/searchNaw.svg"
+            alt=""
+          />
+          <input type="text" placeholder="Search events" />
+          <input type="text" placeholder="Mountain View, CA" />
+          <button type="button" class="redBtn"></button>
+        </div>
+
+        <div class="extra-links">
+          <img
+            src="accets/images/navMenu/language.svg"
+            alt="language icon"
+            style="height: 16px"
+          />
+          <a class="english" href="#"> English </a>
+          <a href="#">Log in</a>
+          <button type="button">Sign up</button>
+        </div>
       </div>
 
       <form id="navSearchFormSmall">
@@ -63,18 +94,7 @@
           </svg>
         </button>
       </form>
-
-      <div class="extra-links">
-        <img
-          src="accets/images/navMenu/language.svg"
-          alt="language icon"
-          style="height: 16px"
-        />
-        <a class="english" href="#"> English </a>
-        <a href="#">Log in</a>
-        <button type="button">Sign up</button>
-      </div>
-    </div>
+    </nav>
 
     <main class="allPages">
       <!-- ====================== JOIN MEETUP ====================== -->
@@ -112,85 +132,101 @@
         <div class="cards">
           <div class="card">
             <img src="accets/images/ivents/Strategy/event1.svg" />
-            <h3>Day Trading Idea and Strategy</h3>
-            <p class="bussines">Business (5 km)</p>
-            <p class="data">Mon, Mar 18 · 7:00 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">1 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>Day Trading Idea and Strategy</h3>
+              <p class="bussines">Business (5 km)</p>
+              <p class="data">Mon, Mar 18 · 7:00 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">1 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
           <div class="card">
             <img src="accets/images/ivents/Palo Alto/event2.svg" />
-            <h3>Let's Talk Networking: JPMorgan Chase in Palo Alto</h3>
-            <p class="bussines">Business (25 km)</p>
-            <p class="data">Tue, Mar 19 · 5:00 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">41 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>Let's Talk Networking: JPMorgan Chase in Palo Alto</h3>
+              <p class="bussines">Business (25 km)</p>
+              <p class="data">Tue, Mar 19 · 5:00 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">41 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
           <div class="card">
             <img src="accets/images/ivents/Use Cases/event3.svg" />
-            <h3>
-              Tech Talks & Quiz: Next- Gen Database Solutions for Emerging Use
-              Cases
-            </h3>
-            <p class="bussines">Technology</p>
-            <p class="data">Wed, Mar 13 · 6:00 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">40 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>
+                Tech Talks & Quiz: Next- Gen Database Solutions for Emerging
+                UseCases
+              </h3>
+              <p class="bussines">Technology</p>
+              <p class="data">Wed, Mar 13 · 6:00 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">40 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
           <div class="card">
             <img src="accets/images/ivents/Person Event/event4.svg" />
-            <h3>INFORMS San Francisco Chapter In-Person Event</h3>
-            <p class="bussines">Health and Wellbeing (50 km)</p>
-            <p class="data">Thu, Mar 28 · 5:00 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">41 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>INFORMS San Francisco Chapter In-Person Event</h3>
+              <p class="bussines">Health and Wellbeing (50 km)</p>
+              <p class="data">Thu, Mar 28 · 5:00 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">41 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
           <div class="card">
             <img src="accets/images/ivents/Meet and Greet/event5.svg" />
-            <h3>AI Wednesdays - Meet and Greet!</h3>
-            <p class="bussines">Technology (5 km)</p>
-            <p class="data">Wed, Mar 13 · 6:30 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">29 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>AI Wednesdays - Meet and Greet!</h3>
+              <p class="bussines">Technology (5 km)</p>
+              <p class="data">Wed, Mar 13 · 6:30 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">29 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
           <div class="card">
             <img src="accets/images/ivents/March 2024/event6.svg" />
-            <h3>ROS By-The-Bay March 2024</h3>
-            <p class="bussines">Social Activities</p>
-            <p class="data">Thu, Mar 21 · 6:00 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">51 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>ROS By-The-Bay March 2024</h3>
+              <p class="bussines">Social Activities</p>
+              <p class="data">Thu, Mar 21 · 6:00 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">51 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
           <div class="card">
             <img src="accets/images/ivents/Singles' Dinner/event7.svg" />
-            <h3>Free Christian Singles' Dinner</h3>
-            <p class="bussines">Hobbies and Passions (10 km)</p>
-            <p class="data">Fri, Mar 29 · 6:00 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">11 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>Free Christian Singles' Dinner</h3>
+              <p class="bussines">Hobbies and Passions (10 km)</p>
+              <p class="data">Fri, Mar 29 · 6:00 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">11 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
           <div class="card">
             <img src="accets/images/ivents/Food served/event8.svg" />
-            <h3>In-person: Deep Dive into RAG Architectures (Food served)</h3>
-            <p class="bussines">Hobbies and Passions (50 km)</p>
-            <p class="data">Thu, Mar 14 · 5:00 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">16 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>In-person: Deep Dive into RAG Architectures (Food served)</h3>
+              <p class="bussines">Hobbies and Passions (50 km)</p>
+              <p class="data">Thu, Mar 14 · 5:00 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">16 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
         </div>
@@ -208,44 +244,53 @@
         <div class="cards">
           <div class="card">
             <img src="accets/images/ivents/Coaches and Speakers/event9.svg" />
-            <h3>
-              Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers
-            </h3>
-            <p class="bussines">Business (25 km)</p>
-            <p class="data">Thu, Mar 14 · 6:00 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">3 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>
+                Amazing On-Demand 15 Min Interviews with Top Coaches and
+                Speakers
+              </h3>
+              <p class="bussines">Business (25 km)</p>
+              <p class="data">Thu, Mar 14 · 6:00 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">3 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
           <div class="card">
             <img src="accets/images/ivents/Online Meetup/event10.svg" />
-            <h3>Vision Pro Developers Online Meetup</h3>
-            <p class="bussines">Technology</p>
-            <p class="data">Wed, Mar 13 · 7:00 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">51 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>Vision Pro Developers Online Meetup</h3>
+              <p class="bussines">Technology</p>
+              <p class="data">Wed, Mar 13 · 7:00 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">51 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
           <div class="card">
             <img src="accets/images/ivents/Musical Moments/event11.svg" />
-            <h3>Significant Musical Moments</h3>
-            <p class="bussines">Hobbies and Passions (10 km)</p>
-            <p class="data">Wed, Mar 13 · 6:00 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">16 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>Significant Musical Moments</h3>
+              <p class="bussines">Hobbies and Passions (10 km)</p>
+              <p class="data">Wed, Mar 13 · 6:00 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">16 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
           <div class="card">
             <img src="accets/images/ivents/FREE Webinar/event12.svg" />
-            <h3>FREE Webinar : Introduction to Power BI</h3>
-            <p class="bussines">Technology</p>
-            <p class="data">Thu, Mar 14 · 5:30 PM PDT</p>
-            <div class="goindAndFree">
-              <p class="going">33 going</p>
-              <p class="free">Free</p>
+            <div class="card-content">
+              <h3>FREE Webinar : Introduction to Power BI</h3>
+              <p class="bussines">Technology</p>
+              <p class="data">Thu, Mar 14 · 5:30 PM PDT</p>
+              <div class="goindAndFree">
+                <p class="going">33 going</p>
+                <p class="free">Free</p>
+              </div>
             </div>
           </div>
         </div>
@@ -333,6 +378,7 @@
             />
             <h4>San Francisco</h4>
           </div>
+
           <div class="city">
             <img
               src="accets/images/cities on meetup/Link → chicago.webp.svg"
@@ -347,7 +393,8 @@
             />
             <h4>Nashville</h4>
           </div>
-          <div class="city">
+
+          <div class="city miami">
             <img src="accets/images/cities on meetup/Link → miami.webp.svg" />
             <h4>Miami</h4>
           </div>
