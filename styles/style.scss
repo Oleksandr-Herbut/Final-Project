@@ -701,9 +701,7 @@ html {
   html p {
     font-size: 13px;
   }
-  .allPages {
-    // padding: 0 20px 20px 20px;
-  }
+
   h1 {
     font-size: 20px;
   }
@@ -751,6 +749,7 @@ html {
   }
 
   #footer {
+    padding: 25px;
     .footers-columns {
       gap: 3%;
     }
