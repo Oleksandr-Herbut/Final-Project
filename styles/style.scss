@@ -225,6 +225,10 @@ html {
   width: 135px;
   background-color: #97cad114;
   margin-bottom: 4%;
+  h3 {
+    font-weight: 500;
+    font-size: 16px;
+  }
 }
 
 //========================= CITY OF MEETUP =========================
@@ -238,6 +242,7 @@ html {
   @include displayFlex2(space-between, center);
   flex-wrap: wrap;
   margin-bottom: $container-margin-bottom;
+  text-align: center;
   h4 {
     margin-top: 24px;
   }
@@ -265,8 +270,9 @@ html {
 }
 .worksContent {
   max-width: 379px;
-  h4 {
+  h3 {
     margin-bottom: $block-margin-bottom;
+    font-size: $font-size20;
   }
   p {
     margin-bottom: $block-margin-bottom;
@@ -525,7 +531,7 @@ html {
     font-size: 25px;
   }
   h2 {
-    font-size: 20px;
+    font-size: $font-size20;
   }
 
   #search-container input[type="text"],
@@ -703,7 +709,7 @@ html {
   }
 
   h1 {
-    font-size: 20px;
+    font-size: $font-size20;
   }
   h2 {
     font-size: 18px;
