@@ -10,21 +10,24 @@
 html {
   max-width: 1512px;
   margin: 0 auto;
-  p {
-    font-size: 16px;
-  }
+}
+h1 {
+  font-size: 24px;
+}
+p {
+  font-size: 16px;
 }
 //========================= NAV MENU =========================
 
 #search-container {
-  @include displayFlex2(space-between, center);
-  flex-wrap: wrap;
+  @include displayFlex3(space-between, center, row);
+  // flex-wrap: wrap;
   position: relative;
   overflow: hidden;
   margin: 20px;
 
   .logo {
-    @include displayFlex2(center, center);
+    @include displayFlex3(center, center, row);
   }
   .logo img {
     height: 37px;
@@ -64,20 +67,23 @@ html {
 
 #search-container .extra-links a,
 #search-container .extra-links button {
-  margin-left: 15px;
+  margin-left: 7px;
   text-decoration: none;
   color: #333;
 }
 #search-container .extra-links {
   @include displayFlex2(center, center);
   button {
-    background-color: #009688;
+    background-color: #00798a;
     border: $border-none;
     color: $colorWhite;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 8px;
   }
+}
+#navSearchFormSmall {
+  display: $display-none;
 }
 
 .filter-container {
@@ -108,13 +114,7 @@ html {
   margin: 16px 0 12px 0;
   text-decoration: underline;
 }
-.container {
-  padding: 20px;
-  max-width: 55%;
-  h1 {
-    font-size: 24px;
-  }
-}
+
 .filters {
   display: flex;
   gap: 10px;
@@ -168,7 +168,7 @@ html {
   display: flex;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px 0 0 0;
   max-width: 100%;
   border-left: none;
   border-right: none;
@@ -201,7 +201,8 @@ html {
 
 .online-event::before {
   @include iconInlineAlign();
-  content: url(../accets/images/onlineEventSvg.svg) "Online Event";
+  content: url(../accets/images/onlineEvent.svg);
+  height: 12px;
   position: absolute;
   background: rgb(255, 255, 255);
   color: #707070;
@@ -237,7 +238,7 @@ html {
   }
 }
 .footers-columns {
-  @include flexAlign(center);
+  @include flexAlign(start);
   gap: 25%;
   flex-wrap: wrap;
   margin: 20px 0 20px 0;
@@ -295,5 +296,135 @@ html {
     text-decoration: none;
     margin: 0 10px;
     font-size: $text-size;
+  }
+}
+//========================= MEDIA =========================
+
+//========================= 1200px =========================
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-weight: 600;
+  }
+  h2 {
+    font-weight: 600;
+  }
+  h3 {
+    font-weight: 500;
+  }
+  .eventsMainTopRight {
+    display: none;
+  }
+}
+
+//========================= 1024px =========================
+
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: $text-size;
+  }
+  h1 {
+    font-weight: 600;
+  }
+  h4 {
+    font-size: $text-size;
+  }
+  .dropdown-toggle {
+    font-size: $text-size;
+  }
+  .extra-links {
+    .english {
+      display: $display-none;
+    }
+  }
+  .eventsMainTopContainer {
+    margin: 44px 68px;
+  }
+}
+
+//========================= 768px =========================
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 12px;
+  }
+  #search-container input[type="text"],
+  .redBtn,
+  .searchLogo {
+    display: $display-none;
+  }
+  #search-container .english {
+    display: block;
+  }
+  #navSearchFormSmall {
+    @include displayFlex3(center, center, row);
+    gap: 0px;
+    margin: 0 auto;
+    input {
+      width: 300px;
+      min-height: 42px;
+      border: 1px solid gray;
+      padding-left: 37px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border-right: 0px;
+    }
+    button {
+      max-height: 42px;
+      outline: none;
+      border: none;
+      background-color: #f65858;
+      padding: 11px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      position: relative;
+    }
+    #navSearchIconSmall {
+      position: absolute;
+      left: -292px;
+      top: 8px;
+    }
+  }
+
+  .eventsMainTopContainer {
+    margin: 22px 22px 60px 22px;
+  }
+  .event {
+    img {
+      min-width: 115px;
+      max-height: 65px;
+    }
+  }
+
+  #footer {
+    .footers-columns {
+      gap: 8%;
+    }
+    .rightSiteFooter {
+      display: $display-none;
+    }
+    .legal a {
+      display: $display-none;
+    }
+  }
+}
+
+//========================= 768px =========================
+
+@media screen and (max-width: 393px) {
+  .dropdown-toggle {
+    font-size: 11px;
+  }
+  #footer {
+    padding: 25px;
+    .footers-columns {
+      gap: 3%;
+    }
   }
 }

@@ -9,7 +9,12 @@ html {
   max-width: 1512px;
   margin: 0 auto;
 }
-html p {
+
+h1 {
+  font-size: 24px;
+}
+
+p {
   font-size: 16px;
 }
 
@@ -17,7 +22,7 @@ html p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: row;
   position: relative;
   overflow: hidden;
   margin: 20px;
@@ -26,6 +31,7 @@ html p {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 #search-container .logo img {
   height: 37px;
@@ -64,7 +70,7 @@ html p {
 
 #search-container .extra-links a,
 #search-container .extra-links button {
-  margin-left: 15px;
+  margin-left: 7px;
   text-decoration: none;
   color: #333;
 }
@@ -75,12 +81,16 @@ html p {
   align-items: center;
 }
 #search-container .extra-links button {
-  background-color: #009688;
+  background-color: #00798a;
   border: none;
   color: white;
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 8px;
+}
+
+#navSearchFormSmall {
+  display: none;
 }
 
 .filter-container {
@@ -111,14 +121,6 @@ html p {
   font-weight: 500;
   margin: 16px 0 12px 0;
   text-decoration: underline;
-}
-
-.container {
-  padding: 20px;
-  max-width: 55%;
-}
-.container h1 {
-  font-size: 24px;
 }
 
 .filters {
@@ -182,7 +184,7 @@ html p {
   display: flex;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px 0 0 0;
   max-width: 100%;
   border-left: none;
   border-right: none;
@@ -224,7 +226,8 @@ html p {
   vertical-align: middle;
   display: inline-block;
   margin-right: 5px;
-  content: url(../accets/images/onlineEventSvg.svg) "Online Event";
+  content: url(../accets/images/onlineEvent.svg);
+  height: 12px;
   position: absolute;
   background: rgb(255, 255, 255);
   color: #707070;
@@ -263,7 +266,7 @@ html p {
 
 .footers-columns {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 25%;
   flex-wrap: wrap;
   margin: 20px 0 20px 0;
@@ -326,4 +329,117 @@ html p {
   text-decoration: none;
   margin: 0 10px;
   font-size: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-weight: 600;
+  }
+  h2 {
+    font-weight: 600;
+  }
+  h3 {
+    font-weight: 500;
+  }
+  .eventsMainTopRight {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 14px;
+  }
+  h1 {
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  .dropdown-toggle {
+    font-size: 14px;
+  }
+  .extra-links .english {
+    display: none;
+  }
+  .eventsMainTopContainer {
+    margin: 44px 68px;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 12px;
+  }
+  #search-container input[type=text],
+  .redBtn,
+  .searchLogo {
+    display: none;
+  }
+  #search-container .english {
+    display: block;
+  }
+  #navSearchFormSmall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0px;
+    margin: 0 auto;
+  }
+  #navSearchFormSmall input {
+    width: 300px;
+    min-height: 42px;
+    border: 1px solid gray;
+    padding-left: 37px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: 0px;
+  }
+  #navSearchFormSmall button {
+    max-height: 42px;
+    outline: none;
+    border: none;
+    background-color: #f65858;
+    padding: 11px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    position: relative;
+  }
+  #navSearchFormSmall #navSearchIconSmall {
+    position: absolute;
+    left: -292px;
+    top: 8px;
+  }
+  .eventsMainTopContainer {
+    margin: 22px 22px 60px 22px;
+  }
+  .event img {
+    min-width: 115px;
+    max-height: 65px;
+  }
+  #footer .footers-columns {
+    gap: 8%;
+  }
+  #footer .rightSiteFooter {
+    display: none;
+  }
+  #footer .legal a {
+    display: none;
+  }
+}
+@media screen and (max-width: 393px) {
+  .dropdown-toggle {
+    font-size: 11px;
+  }
+  #footer {
+    padding: 25px;
+  }
+  #footer .footers-columns {
+    gap: 3%;
+  }
 }/*# sourceMappingURL=style2.css.map */
