@@ -21,7 +21,7 @@ html p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: row;
   position: relative;
   overflow: hidden;
   margin: 20px;
@@ -30,6 +30,7 @@ html p {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 #search-container .logo img {
   height: 37px;
@@ -68,7 +69,7 @@ html p {
 
 #search-container .extra-links a,
 #search-container .extra-links button {
-  margin-left: 15px;
+  margin-left: 7px;
   text-decoration: none;
   color: #333;
 }
@@ -79,12 +80,16 @@ html p {
   align-items: center;
 }
 #search-container .extra-links button {
-  background-color: #009688;
+  background-color: #00798a;
   border: none;
   color: white;
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 8px;
+}
+
+#navSearchFormSmall {
+  display: none;
 }
 
 #content-block {
@@ -104,7 +109,7 @@ html p {
   flex: 1;
 }
 .text h1 {
-  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 .text p {
@@ -156,6 +161,7 @@ html p {
   position: relative;
 }
 .card h3 {
+  font-weight: 600;
   padding: 7px;
 }
 .card p {
@@ -220,6 +226,9 @@ html p {
   margin-bottom: 16px;
 }
 
+#exploreTopCategories {
+  margin-bottom: 64px;
+}
 #exploreTopCategories h2 {
   margin-bottom: 24px;
 }
@@ -362,7 +371,7 @@ html p {
 
 .footers-columns {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 25%;
   flex-wrap: wrap;
   margin: 20px 0 20px 0;
@@ -425,4 +434,291 @@ html p {
   text-decoration: none;
   margin: 0 10px;
   font-size: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-weight: 600;
+  }
+  h2 {
+    font-weight: 600;
+  }
+  h3 {
+    font-weight: 500;
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+  .categories {
+    max-width: 110px;
+    height: 80px;
+  }
+  #citiesOnMeetup .cities {
+    text-align: center;
+  }
+  #citiesOnMeetup .cities img {
+    max-width: 200px;
+  }
+  .text h1 {
+    font-size: 1.5rem;
+  }
+  .text h1 p {
+    font-size: 0.875rem;
+  }
+  .text h1 button {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+  .content-meetup {
+    padding: 50px;
+  }
+  .cities img {
+    width: 154px;
+    height: 154px;
+  }
+  .groups {
+    max-width: 100%;
+  }
+  .footer-column {
+    max-width: 150px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .extra-links .english {
+    display: none;
+  }
+  .heading2 img {
+    max-width: 200px;
+  }
+  #meetup content-meetup button {
+    width: 150px;
+    height: 35px;
+  }
+  #exploreTopCategories .categories {
+    max-width: 100px;
+    height: 80px;
+  }
+  #exploreTopCategories h3 {
+    font-size: 15px;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .cities img {
+    width: 154px;
+    height: 154px;
+  }
+  .cities h4 {
+    margin-top: 13px;
+  }
+  .works {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .groups {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .allPages {
+    padding: 0 30px 30px 30px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  #search-container input[type=text],
+  .redBtn,
+  .searchLogo {
+    display: none;
+  }
+  #search-container .english {
+    display: block;
+  }
+  #navSearchFormSmall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0px;
+    margin: 0 auto;
+  }
+  #navSearchFormSmall input {
+    width: 300px;
+    min-height: 42px;
+    border: 1px solid gray;
+    padding-left: 37px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: 0px;
+  }
+  #navSearchFormSmall button {
+    max-height: 42px;
+    outline: none;
+    border: none;
+    background-color: #f65858;
+    padding: 11px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    position: relative;
+  }
+  #navSearchFormSmall #navSearchIconSmall {
+    position: absolute;
+    left: -292px;
+    top: 8px;
+  }
+  #content-block {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 5% 20px 0px;
+  }
+  #content-block .image img {
+    max-width: 250px;
+    margin-bottom: 10px;
+  }
+  #content-block .text h1 {
+    font-size: 1.5rem;
+  }
+  #content-block .text p {
+    font-size: 0.875rem;
+  }
+  #content-block .text button {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .cards img {
+    max-height: 200px;
+  }
+  .cards h3 {
+    font-size: 12px;
+    padding: 3px;
+  }
+  .cards p {
+    font-size: 10px;
+    padding: 3px;
+  }
+  .card {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    max-width: 100%;
+    gap: 10px;
+  }
+  .card h3 {
+    font-weight: 500;
+  }
+  .card .card-content {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .card img {
+    max-width: 180px;
+  }
+  #meetup {
+    flex-direction: column-reverse;
+  }
+  #meetup .content-meetup {
+    text-align: center;
+  }
+  #meetup .content-meetup button {
+    width: 130px;
+    height: 30px;
+    font-size: 0.875rem;
+  }
+  #meetup .meetupText {
+    margin-bottom: 10px;
+  }
+  #allCategories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 499px;
+    gap: 20px;
+  }
+  .groups .image img {
+    max-width: 80px;
+    margin-bottom: 5px;
+  }
+  #citiesOnMeetup {
+    margin-bottom: 64px;
+  }
+  #citiesOnMeetup .cities {
+    margin: 0 auto;
+    max-width: 399px;
+    gap: 18px;
+  }
+  .smallCities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .miami {
+    display: none;
+  }
+  #friendships .gridFriendships {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 399px;
+  }
+  #footer .footers-columns {
+    gap: 8%;
+  }
+  #footer .rightSiteFooter {
+    display: none;
+  }
+  #footer .legal a {
+    display: none;
+  }
+}
+@media screen and (max-width: 393px) {
+  html p {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  #joinBtn {
+    display: none;
+  }
+  .heading2 p {
+    display: none;
+  }
+  .heading2 img {
+    max-width: 170px;
+  }
+  .cards img {
+    max-width: 140px;
+  }
+  #meetup .logo-meetup img {
+    max-width: 300px;
+  }
+  #meetup .content-meetup {
+    padding: 20px;
+  }
+  #meetup .content-meetup button {
+    margin: 20px;
+  }
+  #meetupWorks .image,
+  #meetupWorks .worksContent {
+    padding: 20px 10px 15px 15px;
+  }
+  #footer .footers-columns {
+    gap: 3%;
+  }
 }/*# sourceMappingURL=style.css.map */
