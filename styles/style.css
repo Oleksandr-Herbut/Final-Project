@@ -35,21 +35,36 @@ html p {
 #search-container .logo img {
   height: 37px;
   margin-right: 30px;
+  transition: transform 0.5s ease;
+}
+#search-container .logo img:hover {
+  transform: scale(1.05);
 }
 
-#search-container input[type=text] {
-  padding: 10px;
-  border-radius: 5px 0 0 5px;
-  border: 1px solid gray;
+#search-container .searchInput {
+  width: 20vw;
+  padding: 12px 5px 12px 37px;
+  border-right: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  transition: border 0.5s ease;
+}
+
+#search-container .searchCityInput {
+  width: 20vw;
+  padding: 12px 20px;
+  border-right: none;
+  border: 1px solid #d9d9d9;
+  border-left: none;
   border-right: none;
   outline: none;
-  text-indent: 20px;
-  border-left: 1px solid #ccc;
+  transition: border 0.5s ease;
 }
 
 .searchLogo {
   position: absolute;
-  left: 140px;
+  left: 144px;
   top: 1px;
   width: 16px;
 }
@@ -60,8 +75,8 @@ html p {
   color: white;
   padding: 10px 20px;
   cursor: pointer;
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-radius: 0 10px 10px 0;
   background-image: url(../accets/images/navMenu/buttonSearch.svg);
   background-repeat: no-repeat;
@@ -69,7 +84,7 @@ html p {
 
 #search-container .extra-links a,
 #search-container .extra-links button {
-  margin-left: 7px;
+  margin-left: 8px;
   text-decoration: none;
   color: #333;
 }
@@ -90,6 +105,15 @@ html p {
 
 #navSearchFormSmall {
   display: none;
+}
+
+.btnTeal {
+  transition: transform 0.5s ease;
+}
+.btnTeal:hover {
+  box-shadow: 0 0 10px rgba(6, 164, 185, 0.5);
+  transform: scale(1.03);
+  cursor: pointer;
 }
 
 #content-block {
@@ -143,6 +167,7 @@ html p {
 .siteRight {
   color: #00798a;
   margin: 10px;
+  cursor: pointer;
 }
 
 .cards {
@@ -159,6 +184,11 @@ html p {
 .card {
   max-width: 300px;
   position: relative;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+  outline: none;
+  cursor: pointer;
 }
 .card h3 {
   font-weight: 600;
@@ -168,6 +198,15 @@ html p {
   padding: 7px;
   font-size: 14px;
   font-weight: 400;
+}
+
+.card {
+  transition: transform 0.5s ease;
+}
+.card:hover {
+  box-shadow: 0 0 10px rgba(6, 164, 185, 0.5);
+  transform: scale(1.03);
+  cursor: pointer;
 }
 
 .goindAndFree {
@@ -220,6 +259,12 @@ html p {
   color: white;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.content-meetup button:hover {
+  background-color: #c91e50;
+  transform: scale(1.05);
 }
 
 .meetupText {
@@ -238,6 +283,7 @@ html p {
   justify-content: space-between;
   max-height: 400px;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 .categories {
@@ -245,13 +291,22 @@ html p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: transform 0.5s ease;
   text-align: center;
   height: 112px;
   width: 135px;
   background-color: rgba(151, 202, 209, 0.0784313725);
   margin-bottom: 4%;
 }
+.categories:hover {
+  box-shadow: 0 0 10px rgba(6, 164, 185, 0.5);
+  transform: scale(1.03);
+  cursor: pointer;
+}
 .categories h3 {
+  display: flex;
+  max-width: 100px;
+  justify-content: center;
   font-weight: 500;
   font-size: 16px;
 }
@@ -272,6 +327,14 @@ html p {
 }
 .cities h4 {
   margin-top: 24px;
+}
+
+.city {
+  transition: transform 0.5s ease;
+}
+
+.city:hover {
+  transform: scale(1.03);
 }
 
 #meetupWorks {
@@ -315,6 +378,7 @@ html p {
   font-weight: 500;
   font-size: 16px;
   color: #00798a;
+  cursor: pointer;
 }
 
 #friendships {
@@ -346,12 +410,38 @@ html p {
 
 .readMoreText {
   color: #00798a;
+  cursor: pointer;
 }
 
 #footer {
   background-color: #1c1c1c;
   color: white;
   padding: 3% 7% 3% 7%;
+}
+
+.linkIcon {
+  transition: color 0.5s ease;
+  color: #d9d9d9;
+}
+
+#facebook_link:hover .linkIcon {
+  color: #6fb1f3;
+}
+
+#twitter_link:hover .linkIcon {
+  color: #1dabdd;
+}
+
+#youtube_link:hover .linkIcon {
+  color: #f50d0d;
+}
+
+#instagram_link:hover .linkIcon {
+  color: #833ab4;
+}
+
+#tiktok_link:hover .linkIcon {
+  color: #04917d;
 }
 
 .footerHead {
@@ -373,12 +463,17 @@ html p {
   color: white;
   background-color: transparent;
   padding: 10px 25px 10px 14px;
+  transition: all 0.5s ease;
+}
+.footerHead button:hover {
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  transform: scale(1.1);
 }
 
 .footers-columns {
   display: flex;
   align-items: start;
-  gap: 25%;
+  gap: 16%;
   flex-wrap: wrap;
   margin: 20px 0 20px 0;
 }
@@ -421,9 +516,8 @@ html p {
   gap: 40px;
 }
 
-.leftSiteFooter img,
-.rightSiteFooter img {
-  cursor: pointer;
+.leftSiteFooter svg {
+  margin: 10px;
 }
 
 .legal {
