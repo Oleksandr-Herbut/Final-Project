@@ -67,9 +67,9 @@ const eventsStore = [
   },
 ];
 
-// Функция фильтрации событий
+/// Функция фильтрации событий
 function filterEvents() {
-  // Получение значений выбранных фильтров
+  // Получение значений выбранных фильтров из выпадающих меню
   const type =
     document
       .querySelector("#type-dropdown .selected")
@@ -86,9 +86,9 @@ function filterEvents() {
   // Фильтрация массива событий на основе выбранных фильтров
   const filteredEvents = eventsStore.filter((event) => {
     return (
-      (type === "" || event.type === type) &&
-      (distance === "" || event.distance === parseInt(distance)) &&
-      (category === "" || event.category === category)
+      (type === "" || event.type === type) && // Фильтрация по типу события
+      (distance === "" || event.distance === parseInt(distance)) && // Фильтрация по расстоянию
+      (category === "" || event.category === category) // Фильтрация по категории
     );
   });
 
@@ -108,6 +108,7 @@ function displayEvents(events) {
     const eventElement = document.createElement("div");
     eventElement.classList.add("event");
     if (event.type === "online") {
+      // Добавление класса "online-event" для онлайн-событий
       eventElement.classList.add("online-event");
     }
 
@@ -116,16 +117,13 @@ function displayEvents(events) {
       ? `<p class="event-attendees">${event.attendees} attendees</p>`
       : "";
     eventElement.innerHTML = `
-              <img src="${event.image}" alt="${
-      event.title
-    }" class="event-image">
-              <div class="event-details">
-                  <p class="event-date">${event.date.toDateString()} - ${event.date.toLocaleTimeString()}</p>
-                  <h4 class="event-title">${event.title}</h4>
-                  <p class="event-category">${event.category}</p>
-                  ${attendeesHTML}
-              </div>
-          `;
+      <img src="${event.image}" alt="${event.title}" class="event-image"> 
+      <div class="event-details">
+        <p class="event-date">${event.date.toDateString()} - ${event.date.toLocaleTimeString()}</p> 
+        <h4 class="event-title">${event.title}</h4> 
+        <p class="event-category">${event.category}</p> 
+        ${attendeesHTML}  
+      </div> `;
     // Добавление элемента события в список событий
     eventsList.appendChild(eventElement);
   });
@@ -134,14 +132,14 @@ function displayEvents(events) {
 // Функция переключения отображения выпадающего меню
 function toggleDropdown(dropdown) {
   const menu = dropdown.querySelector(".dropdown-menu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
+  menu.style.display = menu.style.display === "block" ? "none" : "block"; // Переключение видимости меню
 }
 
 // Функция выбора опции из выпадающего меню
 function selectOption(event, dropdown) {
-  const value = event.target.getAttribute("data-value");
+  const value = event.target.getAttribute("data-value"); // Получение значения выбранной опции
   const toggle = dropdown.querySelector(".dropdown-toggle");
-  toggle.textContent = event.target.textContent;
+  toggle.textContent = event.target.textContent; // Установка текста выбранной опции в заголовок меню
 
   // Удаление класса selected со всех элементов списка и добавление его к выбранному
   dropdown
@@ -157,11 +155,12 @@ function selectOption(event, dropdown) {
 // Добавление обработчиков событий для каждого выпадающего меню
 document.querySelectorAll(".dropdown").forEach((dropdown) => {
   const toggle = dropdown.querySelector(".dropdown-toggle");
-  toggle.addEventListener("click", () => toggleDropdown(dropdown));
+  toggle.addEventListener("click", () => toggleDropdown(dropdown)); // Обработчик клика для открытия/закрытия меню
 
   const options = dropdown.querySelectorAll(".dropdown-menu li");
-  options.forEach((option) =>
-    option.addEventListener("click", (event) => selectOption(event, dropdown))
+  options.forEach(
+    (option) =>
+      option.addEventListener("click", (event) => selectOption(event, dropdown)) // Обработчик выбора опции из меню
   );
 });
 
