@@ -461,9 +461,13 @@ html {
   gap: 40px;
 }
 
-.leftSiteFooter svg {
-  margin: 10px;
+.leftSiteFooter {
+  @include displayFlex3(space-between, center, row);
+  margin-top: 12px;
+  margin-bottom: 24px;
+  gap: 30px;
 }
+
 .legal {
   @include flexAlign(center);
   margin-top: 20px;
